@@ -1,0 +1,1060 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    overflow-y: auto;
+}
+
+.overlayDiv{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: transparent;
+    display: none;
+}
+
+.navLoaderContainer
+{
+    width: 99vw;
+    height: 99vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLoader{
+    width: 233px;
+    justify-items: center;
+}
+
+/* Nav Bar Designing */
+nav {
+    display: none;
+    justify-content: space-between;
+    margin: 12px 19px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.logoSvg {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburgerSvg {
+    display: none;
+}
+
+.home-svg {
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.home-svg:hover {
+    filter: brightness(2);
+    transform: scale(1.2);
+}
+
+.search-Svg {
+    padding: 2px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.search-Svg:hover {
+    filter: brightness(2);
+}
+
+.searchBox {
+    width: 367px;
+    padding: 9px;
+    border-radius: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: filter 0.3s ease;
+}
+
+.searchBox:hover {
+    filter: brightness(1.2)
+}
+
+input {
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: large;
+    white-space: nowrap;
+    transition: color 0.1s ease;
+}
+
+.verticalLine {
+    height: 36px;
+}
+
+.browse-Svg {
+    cursor: pointer;
+    transition: filter 0.3s ease;
+}
+
+.browse-Svg:hover {
+    filter: brightness(2)
+}
+
+.leftNav {
+    width: 31vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightNav {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.black-button {
+    color: gray;
+    background-color: black;
+    padding: 9%;
+    width: 92px;
+    border: none;
+    border-radius: 26px;
+    font-weight: 900;
+    white-space: nowrap;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.black-button:hover {
+    transform: scale(1.050);
+    color: white;
+}
+
+.log-inButton {
+    padding: 9%;
+    width: 92px;
+    border: none;
+    border-radius: 26px;
+    font-weight: 900;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.log-inButton:hover {
+    transform: scale(1.050);
+    background-color: #f0e9e9;
+}
+
+/* Main Container designing */
+.mainContainer {
+    position: relative;
+    height: 81vh;
+    display: none;
+    padding: 5px;
+    gap: 0.5%;
+}
+
+.cardLoader{
+    display: none;
+    border: 2px solid #333;
+    border-radius: 50%;
+    border-top-color: white;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    top: 35%;
+    left: 43%;
+    animation: rotate 0.7s infinite;
+}
+
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.leftBox {
+    position: relative;
+    max-width: 380px;
+    min-width: 273px;
+    height: 80vh;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #121212;
+    overflow-y: auto;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+ul{
+    display: none;
+    min-height: 480px;
+}
+
+.yourLibrary {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.library-Svg {
+    transition: filter 0.3s ease;
+}
+
+.library-Svg:hover {
+    filter: brightness(2);
+    cursor: pointer;
+}
+
+.yourLibrary>span>h4 {
+    transition: filter 0.3s ease;
+    color: #acacac;
+}
+
+.yourLibrary span>h4:hover {
+    filter: brightness(2);
+    cursor: pointer;
+}
+
+.plus-Svg {
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+.plus-Svg:hover {
+    filter: brightness(2)
+}
+
+li {
+    width: 95%;
+    border: 2px solid white;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.creatingPlaylist-Section {
+    width: 88%;
+    padding: 12px;
+    margin: 10px 5px 5px 5px;
+    font-size: 18px;
+    border-radius: 15px;
+    background-color: #e1e1e1;
+}
+
+.createPlaylist-button {
+    padding: 6px;
+    margin: 17px 0px 22px 0px;
+    width: 121px;
+    font-size: 14px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.createPlaylist-button:hover {
+    background-color: #f0e9e9;
+    transform: scale(1.050);
+}
+
+.browsePodcasts-button {
+    padding: 6px;
+    margin: 17px 0px 22px 0px;
+    width: 148px;
+    font-size: 14px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 23px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.browsePodcasts-button:hover {
+    background-color: #f0e9e9;
+    transform: scale(1.050);
+}
+
+.box2 {
+    padding: 18px;
+}
+
+.aboutUs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.aboutLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 23px;
+}
+
+.aboutLinks>* {
+    flex-wrap: wrap;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.cookiesButton {
+    color: white;
+    font-size: 11px;
+    align-self: baseline;
+    text-decoration: none;
+}
+
+.cookiesButton:hover {
+    text-decoration: underline;
+}
+
+.chooseLanguage-Button {
+    border: 1px solid #6a6464;
+    border-radius: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    width: 102px;
+    font-size: 15px;
+    font-weight: bolder;
+    gap: 2px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border ease;
+}
+
+.chooseLanguage-Button:hover {
+    transform: scale(1.050);
+    border: 1px solid white;
+}
+
+.loaderContainerRightBox{
+    display: none;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.loadingRightBox{
+    position: absolute;
+    width: 200px;
+}
+
+.rightBox {
+    display: none;
+    position: relative;
+    background-color: #121212;
+    width: 100vw;
+    min-width: 470px;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.cardLoader-Mobiles
+{
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    background-color: green;
+    animation: loadingCardsMobiles 0.5s ease infinite;
+}
+
+@keyframes loadingCardsMobiles{
+    25%{
+        left: 40%;
+        width: 25%;
+    }
+
+    50%{
+        left: 20%;
+        width: 50%;
+    }
+
+   100%{
+    left: 0%;
+    width: 100%;
+    border: 2px solid green;
+   }
+}
+
+
+.loading{
+    border: 2px solid white;
+    width: 500px;
+    position: absolute;
+    top: 400px;
+    left: 200px;
+}
+
+.section {
+    padding: 23px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 23px 0;
+    position: relative;
+}
+
+.heading {
+    font-size: 1.5em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.heading:hover {
+    text-decoration: underline;
+}
+
+.showAll-Button {
+    color: #6a6565;
+    font-size: 0.9em;
+    font-weight: bolder;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.showAll-Button:hover {
+    text-decoration: underline;
+}
+
+.artistsCards {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.card {
+    border-radius: 7px;
+    height: fit-content;
+    line-height: 23px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+    position: relative;
+}
+
+.card:hover {
+    background-color: #282b2b;
+}
+
+.card:hover .playButton {
+    transform: translateY(4px);
+    opacity: 1;
+}
+
+.card>img:first-of-type {
+    border-radius: 50%;
+    max-width: 15vw;
+}
+
+.playButton {
+    opacity: 0;
+    width: 26%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    border-radius: 50%;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.name {
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.name:hover {
+    text-decoration: underline;
+}
+
+.artist {
+    width: 118px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 0.8em;
+    color: #6a6565;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.card-Section2 {
+    position: relative;
+    padding: 10px;
+    line-height: 23px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.card-Section2:hover {
+    background-color: #282b2b;
+}
+
+.card-Section2:hover .playButton {
+    transform: translateY(4px);
+    opacity: 1;
+}
+
+.img-Section2 {
+    border-radius: 6px;
+    width: 15vw;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #706d6d;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+}
+
+.section4 {
+    display: flex;
+}
+
+.helpSection {
+    display: flex;
+}
+
+.firstTwo-helpLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.secondTwo-helpLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.helpSection>* {
+    margin: 18px;
+}
+
+.helpLinks>* {
+    width: fit-content;
+    padding: 5px;
+}
+
+.boldLinks {
+    font-weight: bolder;
+}
+
+.lightColor-Links {
+    color: #757c7c;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.lightColor-Links:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.socialMedia-Links>* {
+    margin: 0 0 0 4px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #c5c5c5;
+    transition: transform 0.2s ease;
+}
+
+.socialMedia-Links>*:hover {
+    transform: scale(1.1);
+}
+
+.songController {
+    position: absolute;
+    bottom: -80px;
+    right: 6%;
+    width: 90vw;
+    z-index: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+    background-color: rgb(45 30 30);
+    transition: bottom 0.5s ease;
+    border-radius: 10px;
+}
+
+.songController>* {
+    margin: 10px;
+}
+
+.loader{
+    display: none;
+    width: 5px;
+    height: 85px;
+    position: absolute;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    border-top: 5px solid white;
+    left: -13px;
+    animation: move 2s ease-in-out infinite;
+}
+
+@keyframes move {
+    25% {
+        border-left: none;
+        border-bottom: none;
+        border-right: none;
+        width: 100%;
+    }
+
+    50% {
+        border-top: none;
+        height: 100%;
+        border-right: 5px solid white;
+    }
+
+    75%{
+        border-right: none;
+        border-bottom: 5px solid white;
+        width: 100%;
+    }
+
+    100%{
+        width: 100%;
+        height: 100%;
+        border-right: none;
+        border-top: none;
+        border-left: 5px solid white;
+    }
+}
+
+.information {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.parentCont-ControllerSvgs_songDuration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 61%;
+}
+
+.songTitle {
+    font-size: 15px;
+    width: 250px;
+    margin-right: 28%;
+}
+
+.controllerSvgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controllerSvgs>* {
+    cursor: pointer;
+}
+
+.controllerSvgs>*:hover {
+    filter: brightness(2);
+}
+
+.songsControllerPlaySvg {
+    width: 42px;
+}
+
+.songsControllerPlaySvg:hover {
+    filter: brightness(2);
+}
+
+.parentSongDuration-volume{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.volume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume > input{
+    height: 2px;
+    cursor: pointer;
+}
+
+.seekbaar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.controllerLine {
+    width: 99%;
+    border: 2px solid gray;
+}
+
+.circleController {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: left 0.4s ease;
+}
+
+.fillUpLine {
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    left: 0;
+    transition: width 0.4s ease;
+}
+
+.close{
+    width: 13px;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.showSongControllerArrow{
+    width: 23px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    background-color: #3a2f2f;
+    padding: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.separator-line {
+    border: none;
+    border-top: 1px solid #282828;
+    margin: 19px 30px;
+    width: 90%;
+}
+
+.footer {
+    margin: 23px 0;
+    padding: 40px;
+    font-size: 13px;
+    color: #525c5c;
+}
+
+.footerBanner {
+    height: 9vh;
+    min-width: 750px;
+    display: none;
+    justify-content: center;
+    background: linear-gradient(90deg, #a56eff, #ff8acb);
+    color: white;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.footerBannerBox {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signUpFree {
+    font-size: 17px;
+    font-weight: 700;
+    padding: 15px 25px;
+    border-radius: 24px;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 1s ease;
+}
+
+.signUpFree:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 900px) {
+    .buttons {
+        white-space: nowrap;
+    }
+
+    li{
+        width: 263px;
+    }
+
+    .helpSection {
+        flex-direction: column;
+    }
+
+    .firstTwo-helpLinks {
+        gap: 54px;
+    }
+
+    .searchBox > div > input{
+        margin-left: 30px;
+    }
+
+    .songTitle{
+        margin-right: 18%;
+    }
+
+    .parentSongDuration-volume{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .searchBox {
+        width: 29px;
+    }
+
+    .searchBox>div>input {
+        display: none;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .browse-Svg {
+        display: none;
+    }
+
+    .buttons {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 900px) and (max-height: 950px) {
+    body {
+        overflow-y: hidden;
+        scrollbar-width: none;
+    }
+
+    .hamburgerSvg {
+        margin: 0 5% 0 5%;
+        display: inline;
+        background-color: #1f1f1f;
+        padding: 8px;
+        border-radius: 50%;
+    }
+
+    .hamburgerSvg:active {
+        filter: brightness(1.5)
+    }
+
+    .home-svg {
+        margin: 0 5% 0 5%;
+        padding: 8px;
+    }
+
+    .searchBox {
+        margin-left: 3px;
+        position: relative;
+        border-radius: 50%;
+        width: 20px;
+        height: 21px;
+        padding: none;
+    }
+
+    .search-Svg {
+        position: absolute;
+        left: 3px;
+    }
+
+    .buttons {
+        justify-content: flex-start;
+    }
+
+    .leftBox {
+        width: 300px;
+        height: 100vh;
+        position: absolute;
+        left: -300px;
+        z-index: 1;
+        justify-content:flex-start;
+        transition: left 0.3s ease;
+    }
+
+    ul{
+        min-height: 400px;
+    }
+
+    li{
+        width: 282px;
+    }
+
+    .box2{
+        margin-top: 10%;
+    }
+
+    .songController {
+        height: auto;
+        z-index: 3;
+        bottom: -400px;
+    }
+
+    .loader{
+        width: 5px;
+        height: 85px;
+        position: absolute;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        border-top: 5px solid white;
+        left: -13px;
+        top: -10px;
+        animation: move 2s ease-in-out infinite;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parentCont-ControllerSvgs_songDuration{
+        flex-direction: column;
+    }
+
+    .songTitle {
+        text-align: center;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 1.2em;
+    }
+
+    .artistsCards {
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .card>img:first-of-type{
+        min-width: 150px;
+    }
+
+    .img-Section2{
+        min-width: 150px;
+    }
+
+    .playButton {
+        display: none;
+    }
+
+    .name {
+        font-size: 1em;
+    }
+
+    .separator-line {
+        width: 82%;
+    }
+
+    .rightBox {
+        min-width: 90%;
+        height: 100vh;
+        overflow: auto;
+        scrollbar-width: none;
+        border-radius: 5px;
+        scrollbar-width: none;
+    }
+
+    .footerBanner {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 320px)
+{
+    .navbar{
+        position: relative;
+        margin: 20px;
+        height: 120px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        white-space: wrap;
+    }
+
+    .leftNav{
+        position: absolute;
+        left: 9%;
+        top: 0;
+        gap: 40px;
+    }
+
+    .leftNav>div{
+        gap: 40px;
+    }
+
+    .rightNav{
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 5%;
+        bottom: 10px;
+        width: 100px;
+        gap: 23px;
+    }
+    
+    .rightBox{
+        min-width: 240px;
+    }
+}

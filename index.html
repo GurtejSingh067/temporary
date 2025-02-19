@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="unitlity.css">
+</head>
+
+<body>
+    <div class="overlayDiv"></div>
+    <div class="navLoaderContainer">
+        <img src="loading" alt="loading..." class="navLoader">
+    </div>
+    <nav class="navbar">
+        <div class="leftNav">
+            <div class="flex">
+                <img class="invert logoSvg" src="Svgs/logo.svg" alt="logo">
+                <img class="hamburgerSvg" src="Svgs/hamburger.svg" alt="hamburger">
+            </div>
+            <img class="width-svg color home-svg" src="Svgs/home.svg" alt="home">
+        </div>
+        <div class="rightNav">
+            <div class="searchBox color">
+                <div class="flex">
+                    <img class="search-Svg width-svg" src="Svgs/search.svg" alt="search">
+                    <input type="text" placeholder="What do you want to play">
+                </div>
+                <div class="flex">
+                    <img class="invert verticalLine" src="Svgs/verticalLine.svg" alt="verticalLine">
+                    <img class="browse-Svg" src="Svgs/browse.svg" alt="library">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="black-button">Sign Up</button>
+                <button class="log-inButton">Log In</button>
+            </div>
+        </div>
+    </nav>
+    <main class="mainContainer">
+        <div class="leftBox">
+            <div class="box1">
+                <div class="yourLibrary">
+                    <span class="flex">
+                        <img class="library-Svg padding" src="Svgs/library.svg" alt="library">
+                        <h4 class="font padding">Your library</h4>
+                    </span>
+                    <span class="padding">
+                        <img class="plus-Svg" src="Svgs/plus.svg" alt="plus">
+                    </span>
+                </div>
+                <div class="creatingPlaylist-Section invert font">
+                    <h5 class="padding">Create your first playlist</h5>
+                    <h6 class="padding">it's easy, we'll help you</h6>
+                    <button class="createPlaylist-button invert font">Create Playlist</button>
+                </div>
+                <div class="creatingPlaylist-Section invert font">
+                    <h5 class="padding">Let's find some podcasts to follow</h5>
+                    <h6 class="padding">We'll keep you updated on new episodes</h6>
+                    <button class="browsePodcasts-button invert font">Browse podcasts</button>
+                </div>
+                <ul class="font"></ul>
+                <div class="cardLoader"></div>
+
+            </div>
+            <div class="box2">
+                <div class="aboutUs invert font">
+                    <div class="aboutLinks">
+                        <div>Legal</div>
+                        <div>Safety & Privacy centre</div>
+                        <div>Privacy Policy</div>
+                        <div>Cookies</div>
+                        <div>About Ads</div>
+                        <div>Accesibility</div>
+                    </div>
+                    <div>
+                        <a class="cookiesButton invert font" href="">Cookies</a>
+                    </div>
+                    <div class="chooseLanguage-Button invert">
+                        <img class="font" src="Svgs/chooseLanguage.svg" alt="chooseLanguage">
+                        <span class="invert">English</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loaderContainerRightBox">
+            <img src="loading" class="loadingRightBox">
+        </div>
+        <div class="rightBox">
+            <div class="cardLoader-Mobiles"></div>
+            <div class="section4">
+                <div class="helpSection">
+                    <div class="firstTwo-helpLinks">
+                        <div class="helpLinks">
+                            <div class="invert font boldLinks">Company</div>
+                            <div class="font lightColor-Links">About</div>
+                            <div class="font lightColor-Links">Job</div>
+                            <div class="font lightColor-Links">For the record</div>
+                        </div>
+                        <div class="helpLinks">
+                            <div class="invert font boldLinks">Communities</div>
+                            <div class="font lightColor-Links">For Artists</div>
+                            <div class="font lightColor-Links">Developers</div>
+                            <div class="font lightColor-Links">Advertising</div>
+                            <div class="font lightColor-Links">Investors</div>
+                            <div class="font lightColor-Links">Vendor</div>
+                        </div>
+                    </div>
+                    <div class="secondTwo-helpLinks">
+                        <div class="helpLinks">
+                            <div class="invert font boldLinks">Useful-Links</div>
+                            <div class="font lightColor-Links">Support</div>
+                            <div class="font lightColor-Links">Free Mobile Apps</div>
+                        </div>
+                        <div class="helpLinks">
+                            <div class="invert font boldLinks">Spotify Plans</div>
+                            <div class="font lightColor-Links">Premium Individual</div>
+                            <div class="font lightColor-Links">Premium Duo</div>
+                            <div class="font lightColor-Links">Premium Family</div>
+                            <div class="font lightColor-Links">Premium Student</div>
+                            <div class="font lightColor-Links">Spotify Free</div>
+                        </div>
+                    </div>
+                    <div class="socialMedia-Links">
+                        <img class="invert" src="Svgs/instagram.svg" alt="instagram">
+                        <img class="invert" src="Svgs/twitter_X.svg" alt="twitter_X">
+                        <img class="invert" src="Svgs/facebook.svg" alt="facebook">
+                    </div>
+                </div>
+            </div>
+            <hr class="separator-line">
+            <div class="footer invert font">©2025 Spotify AB</div>
+        </div>
+        <div class="songController">
+            <div class="loader"></div>
+            <div class="information">
+                <div class="songTitle font"></div>
+                <div class="parentCont-ControllerSvgs_songDuration">
+                    <div class="controllerSvgs">
+                        <img src="Svgs/previous.svg" alt="previous">
+                        <img class="songsControllerPlaySvg" src="Svgs/play.svg" alt="play">
+                        <img src="Svgs/next.svg" alt="next">
+                    </div>
+                    <div class="parentSongDuration-volume">
+                        <div class="songDuration font"></div>
+                        <div class="volume">
+                            <img src="Svgs/volumeOn.svg" alt="volume on">
+                            <input class="volumeRange" type="range" name="volumeButton">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="seekbaar">
+                <div class="controllerLine"></div>
+                <div>
+                    <div class="circleController"></div>
+                </div>
+                <div>
+                    <div class="fillUpLine"></div>
+                </div>
+            </div>
+            <img class="close" src="Svgs/close.svg" alt="close">
+        </div>
+        <img src="Svgs/arrowUp.svg" alt="" class="showSongControllerArrow">
+    </main>
+    <footer class="footerBanner">
+        <div class="footerBannerBox">
+            <div>
+                <h5 class="font">Preview of Spotify</h5>
+                <h4 class="font">Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+                </h4>
+            </div>
+            <button class="signUpFree font">Sign up Free</button>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
