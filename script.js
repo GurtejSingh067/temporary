@@ -35,9 +35,8 @@ async function populateCards(sectionTitle, previousHTML = false, firstTime = fal
 
     let rightBox = document.querySelector(".rightBox")
     if (firstTime) {
-        if (sectionTitle === "!Popular Artists") {
-            sectionTitle = sectionTitle.replace("!", "")
-            rightBox.innerHTML = `<div data-folder="!${sectionTitle}" class="section">
+        if (sectionTitle === "Popular Artists") {
+            rightBox.innerHTML = `<div data-folder="${sectionTitle}" class="section">
                     <div class="head invert font">
                     <div class="heading">${sectionTitle}</div>
                     <div class="showAll-Button">Show All</div>
@@ -47,10 +46,10 @@ async function populateCards(sectionTitle, previousHTML = false, firstTime = fal
 
             let artistsCards = document.querySelector(".artistsCards")
             for (const title of cardsTitles) {
-                let fetchjson = await fetch(`/Songs/!${sectionTitle}/${title}/info.json`)
+                let fetchjson = await fetch(`/Songs/${sectionTitle}/${title}/info.json`)
                 let jsonFile = await fetchjson.json()
                 artistsCards.innerHTML = artistsCards.innerHTML + `<div data-folder="${title}" class="card">
-                        <img class="img-Section1" src="/Songs/!${sectionTitle}/${title}/cover.jpg"
+                        <img class="img-Section1" src="/Songs/${sectionTitle}/${title}/cover.jpg"
                             alt="${title}">
                         <img class="playButton" src="Svgs/playButton.svg" alt="playButton">
                         <div class="name invert font">${title}</div>
@@ -87,8 +86,7 @@ async function populateCards(sectionTitle, previousHTML = false, firstTime = fal
     }
 
 
-    else if (sectionTitle === "!Popular Artists") {
-        sectionTitle = sectionTitle.replace("!", "")
+    else if (sectionTitle === "Popular Artists") {
         rightBox.innerHTML = rightBox.innerHTML + `<div data-folder="${sectionTitle}" class="section">
         <div class="head invert font">
             <div class="heading">${sectionTitle}</div>
@@ -99,10 +97,10 @@ async function populateCards(sectionTitle, previousHTML = false, firstTime = fal
 
         let artistsCards = document.querySelectorAll(".artistsCards")[document.querySelectorAll(".artistsCards").length - 1]
         for (const title of cardsTitles) {
-            let fetchjson = await fetch(`/Songs/!${sectionTitle}/${title}/info.json`)
+            let fetchjson = await fetch(`/Songs/${sectionTitle}/${title}/info.json`)
             let jsonFile = await fetchjson.json()
             artistsCards.innerHTML = artistsCards.innerHTML + `<div data-folder="${title}" class="card">
-                    <img class="img-Section1" src="/Songs/!${sectionTitle}/${title}/cover.jpg"
+                    <img class="img-Section1" src="/Songs/${sectionTitle}/${title}/cover.jpg"
                         alt="${title}">
                     <img class="playButton" src="Svgs/playButton.svg" alt="playButton">
                     <div class="name invert font">${title}</div>
