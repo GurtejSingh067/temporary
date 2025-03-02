@@ -1,19 +1,10 @@
 {
+    "version": 2,
     "public": true,
-    "cleanUrls": true,
-    "headers": [
+    "builds": [
       {
-        "source": "/Songs/(.*)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "public, max-age=0, must-revalidate"
-          },
-          {
-            "key": "Access-Control-Allow-Origin",
-            "value": "*"
-          }
-        ]
+        "src": "Songs/**",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
